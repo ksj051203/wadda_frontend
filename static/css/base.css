@@ -506,3 +506,25 @@ footer .copyright-wrap span{
 	height: 10%; 
 	max-height: 300px;
 }
+
+
+.birth > input{
+	background-color : #FBF8E8;
+}
+
+.gender >input{
+	background-color: #FBF8E8;
+}
+
+.gender{
+	margin-top : 10px;
+	margin-left : -20px;
+}
+
+.gender > input{
+	border-radius: 5px;
+	width : 60px;
+	height : 30px;
+	border : none;
+
+}
