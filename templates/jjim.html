@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>와따 아이가!</title>
+	<link rel="stylesheet" href="waddajjim.css">
+    
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script>
+
+$.ajax({ 
+    url:"https://wadda1.cafe24.com/tk/load_td.php", // 여기에 찜목록 DB 링크
+    type:"POST", 
+    success: function(result) { 
+
+		
+		html2 = "";
+		result = JSON.parse(result);
+	
+		for(i=0;i<result.length;i++){
+			
+			html2 += '<li><a href="https://wadda1.cafe24.com/wadda_gwangwang.php?detail=' + result[i].seq + '"><img src="' + result[i].pic1 + '" alt="관광지"></a></li>';
+		}
+		$("#jjimli").html(html2);
+		
+
+        
+    } 
+});
+</script>
+</head>
+<body>
+    
+<header>
+	<div class="header-container">
+	</div>
+</header>
+    <div class="main-container">
+        <div class="jjim-section">
+            <h2>내 찜 목록</h2>
+            <ul id="jjimli" class="jjimlist">
+                <!-- 여기에 데이터가 들어옴 -->
+            </ul>
+        </div>
+
+
+        
+        <div class="imagine-section">
+            <h2>추억 보관함</h2>
+            <ul id="imagineli" class="imaginelist">
+                <!-- 여기에 데이터가 들어옴 -->
+            </ul>
+        </div>
+    </div>
+</body>
