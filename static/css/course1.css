@@ -1,6 +1,8 @@
 img {
     width: 500px;
     height: 150px;
+    box-shadow: 5px 5px 5px 5px gray;
+    border-radius: 35px;
 }
 
 div,
@@ -15,4 +17,9 @@ div {
 
 .course {
     color: rgba(111, 141, 116, 0.8);
+}
+
+button {
+    background-color: white;
+    border: 0;
 }
