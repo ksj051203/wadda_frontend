@@ -1,17 +1,38 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="ko">
+<!doctype HTML>
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{% static 'css/base.css' %}">
+	<title>왔다 아이가</title>
+	<link rel="stylesheet" href="waddalobby.css">
     <style>
-        h2{ align-items: left; width: 100%; margin-top: 5%; margin-left: 5px;}
-        img{ align-items: center; width: 100%; height: 10%; max-height: 300px;}
+        h2{ align-items: left; width: 100%; margin-top: 5%;}
     </style>
-	<title>왔다 아이가!</title>
 </head>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script>
+
+$.ajax({ 
+    url:"https://wadda1.cafe24.com/tk/load_td.php?detail=1", 
+    type:"POST", 
+    success: function(result) { 
+
+		
+		html2 = "";
+		result = JSON.parse(result);
+	
+		for(i=0;i<result.length;i++){
+			html2 += '<li><a href="https://wadda1.cafe24.com/tk/wadda_gwangwang.php?detail=' + result[i].seq + '"><img src="' + result[i].pic1 + '" alt="스토리1"></a></li>';
+		}
+
+		$("#liclass").html(html2);
+		
+
+        
+    } 
+});
+
+</script>
 
 <body>
     <div class="main-container">
@@ -20,13 +41,11 @@
         </header>
         <div class="main-section">
             <div id="slide-show">
-                <div class="image">
-                    <img src="./mainImg1.jpg" alt="메인 슬라이드쇼">
-                    <div class="image-text">
-                        <h2>가을하늘에</h2>
-                        <h2>은하수</h2>
-                    </div>
-                </div>
+                <div class="image"><img src="./mainImg1.jpg"></div>
+                <div class="image"><img src="./mainImg2.jpg"></div>
+                <div class="image"><img src="./mainImg3.jpg"></div>
+                <div class="image"><img src="./mainImg4.jpg"></div>
+                <div class="image"><img src="./mainImg5.jpg"></div>
                 
             </div>
         </div>
@@ -34,7 +53,9 @@
         <h2>주변 관광지</h2>
         <section class="story-section">
                 <div class="story-terms_box" tabindex="0" id="divService">
-                    <ul>
+                    <ul id = "liclass" class="aaa">
+                        
+						<!--
                         <li><a href="#"><img src="./storyimg.jpg" alt="스토리1"></a></li>
                         <li><a href="#"><img src="./storyimg.jpg" alt="스토리1"></a></li>
                         <li><a href="#"><img src="./storyimg.jpg" alt="스토리1"></a></li>
@@ -42,7 +63,7 @@
                         <li><a href="#"><img src="./storyimg.jpg" alt="스토리1"></a></li>
                         <li><a href="#"><img src="./storyimg.jpg" alt="스토리1"></a></li>
                         <li><a href="#"><img src="./storyimg.jpg" alt="스토리1"></a></li>
-                        <li><a href="#"><img src="./storyimg.jpg" alt="스토리1"></a></li>
+						!-->
                     </ul>
                 </div>
             </span>
@@ -65,4 +86,5 @@
         </section>
     </div>
 
+	<script src="wadda_slide-show.js"></script>
 </body>
