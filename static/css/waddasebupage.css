@@ -179,3 +179,18 @@ input:focus{
 	margin-top: 3px;
 	float: left;
 }
+
+#SMainImg{
+	width : 5%;
+	height :5%;
+}
+
+button{
+	width : 45px;
+	height: 40px;
+	border : 0;
+	background-color: #FFFFFF;
+	position : absolute;
+	margin-left : -40px;
+	border-radius: 5px;
+}
