@@ -1,0 +1,24 @@
+
+button{
+	margin-top : 10px;
+	width:130px;
+	margin-top: 10px;
+	margin-left: 20px;
+	height: 40px;
+	background-color: #FBF8E8;
+	border-radius: 30px;
+	font-size : 1.2em;
+	box-shadow: 0 1px;
+	color : black;
+	font-weight: bold;
+}
+
+body{
+    margin-left : 670px;
+    margin-top : 200px;
+}
+
+
+img{
+	margin-left : 35px;
+}
