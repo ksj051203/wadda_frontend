@@ -1,11 +1,11 @@
-<!DOCTYPE html> {% load static %}
-<html lang="ko">
-
+<!DOCTYPE html>
 <head>
+    <html lang="ko">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/waddalogin.css">
+    <link rel="stylesheet" href="../static/js/wadda.js">
     <title>왔다 아이가!</title>
 </head>
 
@@ -14,12 +14,11 @@
         <div class="main-wrap">
             <header>
                 <div class="logo-wrap">
-                    <h1>회원가입</h1>
+                    <h1 style = "margin-top : 55px;">회원가입</h1>
                 </div>
             </header>
 
             <form class="login-input-section-wrap" name="joinIn" method="post">
-                {% csrf_token %}
                 <div class="login-input-wrap">
                     <input placeholder="이름" id="name" name="name" type="text"></input>
                 </div>
