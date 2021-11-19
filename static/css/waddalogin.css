@@ -307,3 +307,24 @@ input:focus{
 	height: 52px;
 	text-align:right;
 }
+
+.birth > input{
+	background-color : #FBF8E8;
+}
+
+.gender >input{
+	background-color: #FBF8E8;
+}
+
+.gender{
+	margin-top : 10px;
+	margin-left : -20px;
+}
+
+.gender > input{
+	border-radius: 5px;
+	width : 60px;
+	height : 30px;
+	border : none;
+
+}
